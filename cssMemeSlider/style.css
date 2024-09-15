@@ -15,7 +15,7 @@ body{
 .slider-wrapper{
   width: 25vw;
   background-color: #F5F5F5;
-  padding: 5%;
+  padding: 5vw;
   border-radius: 3rem;
 }
 .slider{
@@ -78,7 +78,7 @@ label {
 label:hover span{
   background: #E95430;
   border: 0.2rem solid #E95430;
-}
+}git checkout 
 label:active span{
   background: #E3DEC1;
   border: 0.2rem solid #E3DEC1;
@@ -91,7 +91,60 @@ input[type=radio]:checked + label:hover span{
   background: #F5F5F5;
   border: 0.2rem solid #E95430;
 }
-
-@media screen and (max-width: 500px) {
-  
+@media (max-width: 1300px){
+  .slider-wrapper {
+    width: 35vw;
+  }
+}
+@media (max-width: 950px){
+  .slider-wrapper {
+    width: 50vw;
+  }
+}
+@media (max-width: 700px){
+  .slider-wrapper {
+    width: 60vw;
+  }
+}
+@media (max-width: 550px){
+  .slider-wrapper {
+    width: 70vw;
+  }
+  body {
+    font-size: 1.3rem;
+  }
+  label {
+    margin-top: -1.7rem;
+    margin-bottom: 2.2rem;
+  }
+  #slide-1 + label {
+    margin-right: 26%;
+  }
+  #slide-2 + label {
+    margin-right: 21%;
+    margin-left: -23%;
+  }
+  #slide-3 + label {
+    margin-right: 20%;
+    margin-left: -19%;
+  }
+  #slide-4 + label {
+    margin-right: 25%;
+    margin-left: -18%;
+  }
+  .caption{
+    margin-top: 2.5rem;
+    margin-bottom: -1.7rem;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    font-size: 1.2rem;
+  }
+  .slider-wrapper {
+    width: 75vw;
+  }
+  #slide-4 + label {
+    margin-right: 22%;
+  }
 }
