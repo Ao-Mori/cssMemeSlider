@@ -1,47 +1,97 @@
-body {
-	margin: 0;
-	display: flex;
+*{
+  transition: all 0.4s ease;
+}
+body{
+  margin: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #DDDDDD;
+  background-color: #E7E7E7;
   font-family: "Arial", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  color:#403640;
 }
 .slider-wrapper{
-	width: 50vw;
+  width: 25vw;
+  background-color: #F5F5F5;
+  padding: 5%;
+  border-radius: 3rem;
 }
-.slides-img {
-  display: flex;
-  width: 400%;
-}
-input {
-  display: none;
-}
-label {
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  margin: 0.5rem;
-  background-color: #000;
-  border-radius: 50%;
-  cursor: pointer;
-}
-#slide-1:checked ~ .slides-img .slide_1 {
-  margin-left: 75%;
-}
-#slide-2:checked ~ .slides-img .slide_2 {
-  margin-left: 50%;
-}
-#slide-3:checked ~ .slides-img .slide_3 {
-  margin-left: 25%;
-}
-#slide-4:checked ~ .slides-img .slide_4 {
-  margin-left: 0;
-}
-.slider {
+.slider{
   display: flex;
   flex-wrap: wrap-reverse;
   overflow: hidden;
   justify-content: flex-end;
+  padding: 0;
+}
+.slides-img{
+  display: flex;
+  width: 400%;
+}
+.slides-img>div {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+img{
+  border-radius: 2rem;
+}
+.caption{
+  margin-top: 0.5rem;
+  margin-bottom: -2.5rem;
+}
+input{
+  display: none;
+}
+label>span{
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0.15rem;
+  background-color: #403640;
+  border: 0.2rem solid #403640;
+  border-radius: 50%;
+  cursor: pointer;
+}
+label {
+  display: flex;
+  /*border: 0.1rem solid black;
+  border-radius: 50%;*/
+  padding: 0.2rem;
+  cursor: pointer;
+  margin-right: 2%;
+  margin-top: 3%;
+}
+#slide-1:checked ~ .slides-img .slide_1{
+  margin-left: 75%;
+}
+#slide-2:checked ~ .slides-img .slide_2{
+  margin-left: 50%;
+}
+#slide-3:checked ~ .slides-img .slide_3{
+  margin-left: 25%;
+}
+#slide-4:checked ~ .slides-img .slide_4{
+  margin-left: 0;
+}
+label:hover span{
+  background: #E95430;
+  border: 0.2rem solid #E95430;
+}
+label:active span{
+  background: #E3DEC1;
+  border: 0.2rem solid #E3DEC1;
+}
+input[type=radio]:checked + label>span{
+  background: #F5F5F5;
+  border: 0.2rem solid #403640;
+}
+input[type=radio]:checked + label:hover span{
+  background: #F5F5F5;
+  border: 0.2rem solid #E95430;
+}
+
+@media screen and (max-width: 500px) {
+  
 }
